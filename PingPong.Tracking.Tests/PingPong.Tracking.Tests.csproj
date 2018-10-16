@@ -72,6 +72,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PingPong.Common\PingPong.Common.csproj">
+      <Project>{e28828c8-b14d-4a61-99b3-1729badee0cb}</Project>
+      <Name>PingPong.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PingPong.Tracking\PingPong.Tracking.csproj">
       <Project>{62c7a02b-8197-4c85-85f5-a428ca3c86f7}</Project>
       <Name>PingPong.Tracking</Name>
