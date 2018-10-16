@@ -13,14 +13,7 @@ namespace PointsEngineConsole
         public static void Main(string[] args)
         {
 
-            //Point point = new Point(int.Parse(coords[0]), int.Parse(coords[1]));
-
-            //points threshold
-
-            //if (point.X > 0 && point.Y < 0.6)
-            //{
-
-            //}
+           
         }
     }
 }

@@ -36,7 +36,7 @@ namespace PointsEngineTests
 
             var result = pointsEngine.DetermineDirectionOfBall(previousPosition, currentPosition);
 
-            Assert.AreEqual(Direction.SouthEast, result) ;
+            Assert.AreEqual(Direction.SouthEast, result);
 
         }
 
@@ -130,5 +130,81 @@ namespace PointsEngineTests
 
             Assert.AreEqual(Direction.West, result);
         }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsOverTheTableForRightPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(0, 50);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.OverTable, result);
+        }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsOverTheTableForLeftPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(400, 50);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.OverTable, result);
+        }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsUnderTheTableForRightPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(0, 300);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.UnderTable, result);
+        }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsUnderTheTableForLeftPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(400, 300);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.UnderTable, result);
+        }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsAtTheSideOfTheTableForLeftPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(350, 300);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.SideOfTable, result);
+        }
+
+        [TestMethod]
+        public void DetermineEndOfPlay_WhenBallTravelsAtTheSideOfTheTableForRightPlayer()
+        {
+            var pointsEngine = new TTPointsEngine();
+
+            Coordinates currentPosition = new Coordinates(350, 300);
+
+            var result = pointsEngine.DetermineEndOfPlay(currentPosition);
+
+            Assert.AreEqual(PlayStatus.SideOfTable, result);
+        }
+
+
+
+
     }
 }

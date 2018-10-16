@@ -46,6 +46,7 @@
     <Compile Include="Coordinates.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="ITTPointsEngine.cs" />
+    <Compile Include="PlayStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TTPointsEngine.cs" />
