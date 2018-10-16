@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPong.Tracking", "PingPo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPong.Tracking.Tests", "PingPong.Tracking.Tests\PingPong.Tracking.Tests.csproj", "{CCCA5940-FF5A-4408-A11D-1DF20695E7E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointsEngineConsole", "..\..\Users\vagrant\source\repos\PointsEngine\PointsEngine\PointsEngineConsole.csproj", "{97F10F6A-9161-428B-B0BA-72303AEE81B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointsEngineTests", "..\..\Users\vagrant\source\repos\PointsEngine\PointsEngineTests\PointsEngineTests.csproj", "{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,22 @@ Global
 		{CCCA5940-FF5A-4408-A11D-1DF20695E7E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CCCA5940-FF5A-4408-A11D-1DF20695E7E6}.Release|x64.ActiveCfg = Release|Any CPU
 		{CCCA5940-FF5A-4408-A11D-1DF20695E7E6}.Release|x64.Build.0 = Release|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Debug|x64.Build.0 = Debug|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{97F10F6A-9161-428B-B0BA-72303AEE81B3}.Release|x64.Build.0 = Release|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{4811A725-65D2-4F7D-8A29-D4A1A900A2C2}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
