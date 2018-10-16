@@ -60,6 +60,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,6 +87,10 @@
     <ProjectReference Include="..\PingPong.Tracking\PingPong.Tracking.csproj">
       <Project>{62c7a02b-8197-4c85-85f5-a428ca3c86f7}</Project>
       <Name>PingPong.Tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PointsEngine\PointsEngineConsole.csproj">
+      <Project>{97F10F6A-9161-428B-B0BA-72303AEE81B3}</Project>
+      <Name>PointsEngineConsole</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

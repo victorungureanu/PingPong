@@ -11,5 +11,7 @@ namespace PointsEngine
     {
         Direction DetermineDirectionOfBall(Coordinates previousPosition, Coordinates currentPosition);
         PlayStatus DetermineEndOfPlay(Coordinates currentPosition);
+
+        void TryCoordinates(Point point);
     }
 }

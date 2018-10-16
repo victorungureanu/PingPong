@@ -4,11 +4,23 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using log4net;
 using PingPong.Common;
+using System;
 using System.Drawing;
 
 namespace PingPong.Tracking
 {
-    public class VideoProcessor
+    public interface IVideoProcessor
+    {
+        Mat CameraFeed { get; }
+        Mat HSV { get; }
+        Mat Thresold { get; }
+        bool ShouldStop { get; set; }
+        void Process(string filePath);
+
+
+    }
+
+    public class VideoProcessor : IVideoProcessor
     {
         private readonly ILog log;
         private readonly Configuration configuration;
@@ -22,6 +34,8 @@ namespace PingPong.Tracking
             this.log = log;
             this.configuration = configuration;
         }
+
+        public Action<Point> BallDetected { private get; set; }
 
         public Mat CameraFeed => cameraFeed;
         public Mat HSV => hsv;
@@ -77,6 +91,11 @@ namespace PingPong.Tracking
                 }
 
                 var ballPosition = GetFilteredObjectPosition(threshold);
+
+                if (!ballPosition.IsEmpty)
+                {
+                    BallDetected?.Invoke(ballPosition);
+                }
 
                 if (configuration.ShowDebugWindows)
                 {

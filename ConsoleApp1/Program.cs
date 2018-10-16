@@ -4,6 +4,7 @@ using log4net;
 using log4net.Config;
 using PingPong.Common;
 using PingPong.Tracking;
+using PointsEngine;
 
 namespace ConsoleApp1
 {
@@ -18,6 +19,13 @@ namespace ConsoleApp1
 
             // the magic
             VideoProcessor videoProcessor = new VideoProcessor(log, config);
+
+            TTPointsEngine engine = new TTPointsEngine();
+
+            videoProcessor.BallDetected = (p) =>
+            {
+                engine.TryCoordinates(p);
+            };
 
 
             var processingTask = Task.Run(() => { videoProcessor.Process(@"C:\hackathon\input\video4.mov");}) ;
