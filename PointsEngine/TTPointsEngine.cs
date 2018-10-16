@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-
-
-namespace PointsEngine
+﻿namespace PointsEngine
 {
     public class TTPointsEngine : ITTPointsEngine
     {

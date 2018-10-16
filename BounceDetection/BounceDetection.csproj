@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BounceDetection.cs" />
+    <Compile Include="BounceDirection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PointsEngine\PointsEngineConsole.csproj">
+      <Project>{97F10F6A-9161-428B-B0BA-72303AEE81B3}</Project>
+      <Name>PointsEngineConsole</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
