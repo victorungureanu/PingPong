@@ -10,5 +10,6 @@ namespace PointsEngine
     public interface ITTPointsEngine
     {
         Direction DetermineDirectionOfBall(Coordinates previousPosition, Coordinates currentPosition);
+        PlayStatus DetermineEndOfPlay(Coordinates currentPosition);
     }
 }

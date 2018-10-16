@@ -1,7 +1,7 @@
-﻿using System;
-using log4net;
+﻿using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using PingPong.Common;
 
 namespace PingPong.Tracking.Tests
 {
@@ -10,13 +10,16 @@ namespace PingPong.Tracking.Tests
     {
         private VideoProcessor processor;
         private Mock<ILog> logMock;
+        private Mock<Configuration> configMock;
 
 
         [TestInitialize]
         public void Setup()
         {
             logMock = new Mock<ILog>();
-            processor = new VideoProcessor(logMock.Object);
+            configMock = new Mock<Configuration>();
+
+            processor = new VideoProcessor(logMock.Object, configMock.Object);
         }
 
         [TestMethod]
