@@ -20,9 +20,10 @@ namespace PingPong.Common
         public virtual double ValueMin => 182;
         public virtual double ValueMax => 256;
 
-        public virtual double Erode => 3;
-        public virtual double Dilate => 8;
+        public virtual int Erode => 3;
+        public virtual int Dilate => 8;
 
         public virtual bool ShowDebugWindows => true;
+        public bool UseMorphOperations => true;
     }
 }
